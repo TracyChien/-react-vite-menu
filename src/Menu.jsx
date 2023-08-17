@@ -109,7 +109,7 @@ const Menu = () => {
     <div className="container">
       <h1 className=" text-2xl font-bold text-center my-4">餐點管理工具</h1>
       <div className="flex justify-between items-center">
-        <p>庫存範圍:0-100</p>
+        <p>庫存範圍:0-100個</p>
         <button
           className="w-14 border text-black border-gray-200 bg-gray-200 rounded-md py-1 m-2 transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
           onClick={() => {
