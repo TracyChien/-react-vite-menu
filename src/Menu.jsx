@@ -201,24 +201,32 @@ const Menu = () => {
                     <p>元</p>
                   </div>
                 </td>
-                <td className="flex justify-center items-center py-2 px-6">
-                  <button
-                    className="w-7 border border-gray-700 bg-gray-700 text-white rounded-md py-2 m-2 transition duration-500 ease select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline"
-                    onClick={() => {
-                      handleMinusClick(item);
-                    }}
-                  >
-                    -
-                  </button>
-                  {item.stockNum}
-                  <button
-                    className="w-7 border border-gray-700 bg-gray-700 text-white rounded-md py-2 m-2 transition duration-500 ease select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline"
-                    onClick={() => {
-                      handleAddClick(item);
-                    }}
-                  >
-                    +
-                  </button>
+                <td className="py-2 px-6">
+                  <div className="flex justify-center items-center ">
+                    {item.editing ? (
+                      <p>{item.stockNum}</p>
+                    ) : (
+                      <>
+                        <button
+                          className="w-7 border border-gray-700 bg-gray-700 text-white rounded-md py-2 m-2 transition duration-500 ease select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline"
+                          onClick={() => {
+                            handleMinusClick(item);
+                          }}
+                        >
+                          -
+                        </button>
+                        {item.stockNum}
+                        <button
+                          className="w-7 border border-gray-700 bg-gray-700 text-white rounded-md py-2 m-2 transition duration-500 ease select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline"
+                          onClick={() => {
+                            handleAddClick(item);
+                          }}
+                        >
+                          +
+                        </button>
+                      </>
+                    )}
+                  </div>
                 </td>
                 <td className="py-2 px-6 text-center">
                   {item.editing ? (
